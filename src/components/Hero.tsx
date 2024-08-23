@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <main className="relative z-10 min-h-screen pt-52 pb-40 space-y-12">
+    <main className="relative z-10 min-h-screen pt-52 pb-32 space-y-12">
       <div className="max-w-[800px] mx-auto text-center">
         <div className="text-[4rem] leading-tight tracking-wide text-mytext font-content font-bold mb-8">
           One smart solution tool for your business
