@@ -8,7 +8,7 @@ import { ArrowUpRight, MoveUpRight } from 'lucide-react';
 
 const Nav = () => {
   return (
-    <Container className="fixed top-16 left-1/2 -translate-x-1/2 bg-mybg rounded-md shadow-xl  w-full">
+    <Container className="fixed top-16 left-1/2 -translate-x-1/2 bg-mybg rounded-md shadow-[0px_5px_15px_rgba(0,0,0,0.35)]  w-full">
       <nav className="size-full  flex items-center justify-between  px-4 py-3">
         <div className="flex items-center gap-x-2 cursor-pointer">
           <Image src={logo1} alt="logo" width={50} height={50} className="" />
