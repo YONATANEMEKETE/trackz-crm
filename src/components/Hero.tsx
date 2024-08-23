@@ -18,7 +18,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <main className="min-h-screen pt-52 pb-40 space-y-12">
+    <main className="relative z-10 min-h-screen pt-52 pb-40 space-y-12">
       <div className="max-w-[800px] mx-auto text-center">
         <div className="text-[4rem] leading-tight tracking-wide text-mytext font-content font-bold mb-8">
           One smart solution tool for your business
@@ -79,6 +79,17 @@ const Hero = () => {
           <HeroChart2 />
         </div>
       </Container>
+      {/*  */}
+
+      <div className="absolute -z-20 -top-10 inset-x-0 h-[90vh] overflow-clip">
+        <div className="absolute -top-1/3 right-3/4 size-[1800px] rounded-full bg-myaccent/30">
+          <div className="size-[95%] rounded-full bg-mybg"></div>
+        </div>
+        <div className="absolute -top-1/3 left-[75%] size-[1800px] rounded-full bg-myaccent/30">
+          <div className="size-[95%] rounded-full bg-mybg"></div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-mybg via-mybg to-transparent"></div>
+      </div>
     </main>
   );
 };
