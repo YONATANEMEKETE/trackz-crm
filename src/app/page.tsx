@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import Nav from '@/components/Nav';
 import Plans from '@/components/Plans';
 import Solutions from '@/components/Solutions';
+import Stats from '@/components/Stats';
 import Trusted from '@/components/Trusted';
 import Image from 'next/image';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Solutions />
       <Features />
       <Plans />
+      <Stats />
     </main>
   );
 }
