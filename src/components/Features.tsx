@@ -24,7 +24,7 @@ const Features = () => {
         Your Customers are always Connected.
       </h2>
 
-      <p className="text-mytextgray text-lg font-heading font-semibold max-w-[500px] mx-auto">
+      <p className="text-mytextgray text-lg font-content font-semibold max-w-[500px] mx-auto">
         Customer relationship Managment tool for everyone who values
         collaboration
       </p>
