@@ -5,10 +5,12 @@ import { Layers } from 'lucide-react';
 import { FaLayerGroup } from 'react-icons/fa6';
 import { IoIosMail } from 'react-icons/io';
 import { RiMoneyDollarCircleFill } from 'react-icons/ri';
+import SolutionChart from './SolutionChart';
+import SolutionChart2 from './SolutionChart2';
 
 const Solutions = () => {
   return (
-    <Container className="py-16 pt-28 px-8">
+    <Container className="py-16 pt-28 px-8 mb-12">
       <Button
         variant={'outline'}
         size={'lg'}
@@ -29,7 +31,11 @@ const Solutions = () => {
       </div>
       {/*  */}
       <div className="flex justify-between gap-20">
-        <div className="bg-mycardBg rounded-xl flex-1"></div>
+        <div className="relative bg-mycardBg rounded-xl flex-1 min-w-[400px]">
+          <SolutionChart />
+          <SolutionChart2 />
+          <Circle />
+        </div>
         <div className="space-y-6">
           <Solution
             heading="Business CRM"
@@ -83,5 +89,11 @@ const Solution = ({ heading, description, icon }: Props) => {
         </div>
       </div>
     </div>
+  );
+};
+
+const Circle = () => {
+  return (
+    <div className="size-24 rounded-full bg-mylogoBorder ring-myaccent ring-2 ring-offset-1 absolute right-[25%] top-[25%]"></div>
   );
 };

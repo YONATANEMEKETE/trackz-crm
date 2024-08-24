@@ -28,7 +28,7 @@ const Links = ({ text, more, hiring }: LinkProps) => {
         </div>
         <Badge
           variant={'outline'}
-          className="text-sm font-content font-medium text-myaccent bg-mylogoBorder rounded-md"
+          className="text-sm font-content font-medium text-myaccent bg-mylogoBorder/60 rounded-md"
         >
           Hiring
         </Badge>

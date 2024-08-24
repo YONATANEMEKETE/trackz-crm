@@ -1,4 +1,5 @@
 import Anounce from '@/components/Anounce';
+import Features from '@/components/Features';
 import Hero from '@/components/Hero';
 import Nav from '@/components/Nav';
 import Solutions from '@/components/Solutions';
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Trusted />
       <Solutions />
+      <Features />
     </main>
   );
 }
