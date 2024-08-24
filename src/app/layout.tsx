@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Kanit, Roboto } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import SmoothScroll from '@/components/SmoothScroll';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-content' });
 
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.variable, roboto.variable, kanit.variable)}>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
