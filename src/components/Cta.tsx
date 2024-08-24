@@ -5,19 +5,19 @@ import { ArrowUpRight } from 'lucide-react';
 
 const Cta = () => {
   return (
-    <Container className="relative z-10 mt-40 bg-myctaBg rounded-3xl overflow-clip py-24 text-center">
-      <h2 className="text-[3rem] text-white font-content font-semibold">
+    <Container className="mx-2 min-[1200px]:mx-auto relative z-10 mt-40 bg-myctaBg rounded-3xl overflow-clip py-24 text-center">
+      <h2 className="text-[2rem] md:text-[3rem] text-white font-content font-semibold">
         Lets get you growing.
       </h2>
-      <h2 className="text-[3rem] text-white font-content font-semibold">
+      <h2 className="text-[2rem] md:text-[3rem] text-white font-content font-semibold">
         Without the pains.
       </h2>
-      <p className="text-mybg/70 text-base font-heading font-semibold max-w-[500px] mx-auto mt-4">
+      <p className="text-mybg/70 text-sm md:text-base font-heading font-semibold max-w-[500px] mx-auto mt-4">
         CRM that works for you, not the other way arround its lightweight,
         customizable and powered by AI.
       </p>
       {/*  */}
-      <div className="flex items-center gap-6 mx-auto w-max mt-12">
+      <div className="flex flex-col min-[500px]:flex-row items-center gap-6 mx-auto w-max mt-12">
         <Button
           variant={'default'}
           size={'lg'}

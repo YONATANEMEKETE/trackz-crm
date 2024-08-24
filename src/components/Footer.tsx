@@ -12,7 +12,7 @@ import { FaFacebook } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div className="w-full bg-mycardBg/80 mt-20">
-      <Container className="py-16 px-12">
+      <Container className="py-16 px-6 md:px-12">
         <div className="flex items-center gap-x-2 cursor-pointer">
           <Image src={logo1} alt="logo" width={40} height={40} className="" />
           <div className="text-[2rem] text-mytext font-logo font-medium">
@@ -20,8 +20,8 @@ const Footer = () => {
           </div>
         </div>
         {/*  */}
-        <div className="flex items-start justify-between mt-16 mb-10">
-          <div className="flex items-start gap-24">
+        <div className="flex flex-col lg:flex-row gap-y-16 items-start justify-between mt-16 mb-10">
+          <div className="flex flex-wrap items-start gap-y-8 gap-x-12 md:gap-x-24">
             <div className=" space-y-4">
               <div className="text-lg text-mytext font-heading font-bold">
                 Invest
@@ -83,12 +83,12 @@ const Footer = () => {
             <div className="mt-8 space-y-3">
               <Input
                 placeholder="Your email adress"
-                className="border border-myaccent rounded-xl min-w-[350px] py-5 bg-mybg text-base text-mytext font-heading font-semibold"
+                className="border border-myaccent rounded-xl min-w-[250px] md:min-w-[350px] py-5 bg-mybg text-base text-mytext font-heading font-semibold"
               />
               <Button
                 variant={'default'}
                 size={'lg'}
-                className="min-w-[350px] flex items-center bg-myaccent/90 hover:bg-myaccent rounded-xl text-white text-base font-content font-semibold"
+                className="min-w-[250px] md:min-w-[350px] flex items-center bg-myaccent/90 hover:bg-myaccent rounded-xl text-white text-base font-content font-semibold"
               >
                 <p>Sign Up</p>
                 <ArrowUpRight />
@@ -102,7 +102,7 @@ const Footer = () => {
           <p className="text-xs text-mytextgray font-heading font-semibold">
             Trackz copyright 2024. All rights Reserved
           </p>
-          <div className="flex items-center gap-4 text-2xl text-myaccent">
+          <div className="flex items-center gap-4 text-lg min-[500px]:text-2xl text-myaccent">
             <FaTwitter />
             <FaLinkedin />
             <FaFacebook />

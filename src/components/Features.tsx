@@ -11,7 +11,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const Features = () => {
   return (
-    <div className="mx-10 pt-20 pb-20 min-h-screen bg-mycardBg rounded-2xl text-center">
+    <div className="lg:mx-10 pt-20 pb-20 px-2 min-h-screen bg-mycardBg rounded-2xl text-center overflow-clip">
       <Button
         variant={'outline'}
         size={'lg'}
@@ -20,11 +20,11 @@ const Features = () => {
         Features
       </Button>
 
-      <h2 className="text-[3rem] text-mytext font-heading font-semibold max-w-[700px] mx-auto mb-4">
+      <h2 className="text-[2rem] md:text-[3rem] text-mytext font-heading font-semibold max-w-[700px] mx-auto mb-4">
         Your Customers are always Connected.
       </h2>
 
-      <p className="text-mytextgray text-lg font-content font-semibold max-w-[500px] mx-auto">
+      <p className="text-mytextgray text-base md:text-lg font-content font-semibold max-w-[500px] mx-auto">
         Customer relationship Managment tool for everyone who values
         collaboration
       </p>

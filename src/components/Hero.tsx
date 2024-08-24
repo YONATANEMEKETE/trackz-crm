@@ -18,18 +18,18 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <main className="relative z-10 min-h-screen pt-52 pb-32 space-y-12">
+    <main className="relative z-10 min-h-screen pt-40 min-[500px]:pt-52 pb-32 px-4 space-y-12">
       <div className="max-w-[800px] mx-auto text-center">
-        <div className="text-[4rem] leading-tight tracking-wide text-mytext font-content font-bold mb-8">
+        <div className=" text-[3rem] md:text-[4rem] leading-tight tracking-wide text-mytext font-content font-bold mb-8">
           One smart solution tool for your business
         </div>
 
-        <p className="max-w-[600px] mx-auto text-xl leading-normal text-mytextgray font-heading font-medium mb-12">
+        <p className="max-w-[600px] mx-auto text-lg md:text-xl leading-normal text-mytextgray font-heading font-medium mb-12">
           CRM that works for you. not the other way arround, it is Lightweight,
           Customizable and Powered by AI
         </p>
 
-        <div className="flex items-center gap-4 mx-auto w-max">
+        <div className="grid grid-cols-1 min-[500px]:grid-cols-2 flex-wrap items-center gap-4 mx-auto w-max">
           <Button
             variant={'default'}
             size={'lg'}
@@ -48,8 +48,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <Container className="flex items-center justify-between pt-10 max-w-[1100px] mx-auto">
-        <div className="flex items-center gap-4">
+      <Container className="flex items-center justify-center lg:justify-between pt-10 max-w-[1100px] mx-auto">
+        <div className="hidden lg:flex items-center gap-4">
           <div className="space-y-3 -translate-y-10">
             <HeroTools text="Emailing" image={gmail} />
             <HeroTools text="Storage" image={dropbox} />
@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
         </div>
         {/*  */}
-        <div className="size-20 relative ring-8 ring-mylogoBorder rounded-tr-2xl rounded-bl-2xl">
+        <div className="hidden lg:block size-20 relative ring-8 ring-mylogoBorder rounded-tr-2xl rounded-bl-2xl">
           <Image
             src={logo1}
             alt="logo Trackz"

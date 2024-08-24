@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-mybg">
+    <main className="min-h-screen bg-mybg overflow-x-clip">
       <Anounce />
       <Nav />
       <Hero />

@@ -5,7 +5,7 @@ import PriceCard from './PriceCard';
 
 const Plans = () => {
   return (
-    <Container className="pt-28 text-center">
+    <Container className="pt-28 px-2 text-center">
       <Button
         variant={'outline'}
         size={'lg'}
@@ -14,16 +14,16 @@ const Plans = () => {
         Plans
       </Button>
 
-      <h2 className="text-[3rem] text-mytext font-heading font-semibold max-w-[700px] mx-auto mb-4">
+      <h2 className="text-[2rem] md:text-[3rem] text-mytext font-heading font-semibold max-w-[700px] mx-auto mb-4">
         From nothing to Something
       </h2>
 
-      <p className="text-mytextgray text-lg font-content font-semibold max-w-[500px] mx-auto">
+      <p className="text-mytextgray text-base md:text-lg font-content font-semibold max-w-[500px] mx-auto">
         Designed for every stage of your journey. start today, no credit card
         required
       </p>
 
-      <div className="flex gap-10 justify-center pt-20">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-center pt-20">
         <PriceCard
           variant="basic"
           title="CRM For Services"

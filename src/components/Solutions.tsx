@@ -11,19 +11,21 @@ import SolutionChart2 from './SolutionChart2';
 const Solutions = () => {
   return (
     <Container className="py-16 pt-28 px-8 mb-12">
-      <Button
-        variant={'outline'}
-        size={'lg'}
-        className="rounded-xl bg-transparent hover:bg-transparent hover:text-myaccent text-lg text-myaccent border-myaccent/80 font-heading font-semibold mb-8"
-      >
-        Solutions
-      </Button>
+      <div className="w-max mx-auto lg:ml-0">
+        <Button
+          variant={'outline'}
+          size={'lg'}
+          className="text-center rounded-xl bg-transparent hover:bg-transparent hover:text-myaccent text-lg text-myaccent border-myaccent/80 font-heading font-semibold mb-8"
+        >
+          Solutions
+        </Button>
+      </div>
 
-      <div className="flex items-center justify-between mb-20">
-        <h2 className="text-[2.5rem] max-w-[40%] text-mytext font-content font-bold">
+      <div className="flex flex-col gap-y-4 lg:flex-row items-center justify-center lg:justify-between mb-20 w-full">
+        <h2 className="text-[2.5rem] text-center lg:text-start max-w-[500px] lg:max-w-[40%] text-mytext font-content font-bold">
           Build A Solution That's truly Your own
         </h2>
-        <p className="text-base text-mytextgray  font-heading font-semibold max-w-[45%] w-max">
+        <p className="text-base text-mytextgray text-center lg:text-start  font-heading font-semibold max-w-[500px] lg:max-w-[45%]">
           Manage All things equity in one place, with Trackz you get the all in
           one sales and marketing automation plateform designed to help your
           small business to grow.
@@ -31,12 +33,12 @@ const Solutions = () => {
       </div>
       {/*  */}
       <div className="flex justify-between gap-20">
-        <div className="relative bg-mycardBg rounded-xl flex-1 min-w-[400px]">
+        <div className="hidden lg:block relative bg-mycardBg rounded-xl flex-1 min-w-[500px]">
           <SolutionChart />
           <SolutionChart2 />
           <Circle />
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 lg:block place-content-center mx-auto">
           <Solution
             heading="Business CRM"
             description="Get organized and automate follow-up with keap’s client managment software"
@@ -94,6 +96,6 @@ const Solution = ({ heading, description, icon }: Props) => {
 
 const Circle = () => {
   return (
-    <div className="size-24 rounded-full bg-mylogoBorder ring-myaccent ring-2 ring-offset-1 absolute right-[25%] top-[25%]"></div>
+    <div className="hidden min-[1200px]:block size-24 rounded-full bg-mylogoBorder ring-myaccent ring-2 ring-offset-1 absolute right-[25%] top-[25%]"></div>
   );
 };
