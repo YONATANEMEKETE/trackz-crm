@@ -1,5 +1,7 @@
 import Anounce from '@/components/Anounce';
+import Cta from '@/components/Cta';
 import Features from '@/components/Features';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Nav from '@/components/Nav';
 import Plans from '@/components/Plans';
@@ -10,7 +12,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-mybg pb-40">
+    <main className="min-h-screen bg-mybg">
       <Anounce />
       <Nav />
       <Hero />
@@ -19,6 +21,8 @@ export default function Home() {
       <Features />
       <Plans />
       <Stats />
+      <Cta />
+      <Footer />
     </main>
   );
 }
