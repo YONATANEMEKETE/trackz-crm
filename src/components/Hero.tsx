@@ -3,18 +3,12 @@ import { Button } from './ui/button';
 import { CirclePlay } from 'lucide-react';
 import { MdOutlinePlayCircleFilled } from 'react-icons/md';
 import Container from './Container';
-import HeroTools from './HeroTools';
-import gmail from '../../public/gmail.svg';
-import dropbox from '../../public/dropbox.svg';
-import paypal from '../../public/paypal.svg';
-import slack from '../../public/slack.svg';
-import wallet from '../../public/wallet.svg';
-import discord from '../../public/discord.svg';
-import shopify from '../../public/shopify.svg';
+
 import HeroChart from './HeroChart';
 import HeroChart2 from './HeroChart2';
 import logo1 from '../../public/logo1.png';
 import Image from 'next/image';
+import HeroToolsJoined from './HeroToolsJoined';
 
 const Hero = () => {
   return (
@@ -49,21 +43,7 @@ const Hero = () => {
       </div>
 
       <Container className="flex items-center justify-center lg:justify-between pt-10 max-w-[1100px] mx-auto">
-        <div className="hidden lg:flex items-center gap-4">
-          <div className="space-y-3 -translate-y-10">
-            <HeroTools text="Emailing" image={gmail} />
-            <HeroTools text="Storage" image={dropbox} />
-          </div>
-          <div className="space-y-3">
-            <HeroTools text="Billing" image={paypal} />
-            <HeroTools text="Texting" image={slack} />
-            <HeroTools text="Manage" image={wallet} />
-          </div>
-          <div className="space-y-3">
-            <HeroTools text="Voicemail" image={discord} />
-            <HeroTools text="Marketing" image={shopify} />
-          </div>
-        </div>
+        <HeroToolsJoined />
         {/*  */}
         <div className="hidden lg:block size-20 relative ring-8 ring-mylogoBorder rounded-tr-2xl rounded-bl-2xl">
           <Image

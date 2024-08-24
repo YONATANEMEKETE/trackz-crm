@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import { ScrollParallax } from 'react-just-parallax';
 
 const SolutionChart = () => {
   return (

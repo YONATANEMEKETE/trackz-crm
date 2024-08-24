@@ -96,6 +96,6 @@ const Solution = ({ heading, description, icon }: Props) => {
 
 const Circle = () => {
   return (
-    <div className="hidden min-[1200px]:block size-24 rounded-full bg-mylogoBorder ring-myaccent ring-2 ring-offset-1 absolute right-[25%] top-[25%]"></div>
+    <div className="hidden min-[1200px]:block size-24 rounded-full bg-mylogoBorder ring-myaccent ring-2 ring-offset-1 absolute  right-[25%] top-[25%]"></div>
   );
 };
