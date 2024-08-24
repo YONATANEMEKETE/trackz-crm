@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const Cta = () => {
   return (
-    <Container className="mt-40 bg-myctaBg rounded-3xl py-24 text-center">
+    <Container className="relative z-10 mt-40 bg-myctaBg rounded-3xl overflow-clip py-24 text-center">
       <h2 className="text-[3rem] text-white font-content font-semibold">
         Lets get you growing.
       </h2>
@@ -33,6 +33,12 @@ const Cta = () => {
           Contact Sales
           <ArrowUpRight />
         </Button>
+      </div>
+
+      <div className="absolute -z-20 inset-0  overflow-clip">
+        <div className="absolute -top-1/3 -left-[95%] size-[1500px] rounded-full bg-myctaBg ring-[60px] ring-myaccent/30"></div>
+        <div className="absolute -top-1/3 -right-[90%] size-[1500px] rounded-full bg-myctaBg ring-[60px] ring-myaccent/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-myctaBg via-myctaBg to-transparent"></div>
       </div>
     </Container>
   );

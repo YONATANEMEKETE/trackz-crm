@@ -9,7 +9,7 @@ import trustedSlack from '../../public/trustedSlack.svg';
 
 const Trusted = () => {
   return (
-    <Container className="px-28 py-12 space-y-10 bg-myaccent/90 rounded-2xl text-center">
+    <Container className="px-28 py-20 space-y-16 bg-myaccent/90 rounded-2xl text-center">
       <div className="text-xl text-white font-content font-medium mx-auto">
         Trusted by World's Best Companies
       </div>

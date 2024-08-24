@@ -48,7 +48,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <Container className="flex items-center justify-between pt-10">
+      <Container className="flex items-center justify-between pt-10 max-w-[1100px] mx-auto">
         <div className="flex items-center gap-4">
           <div className="space-y-3 -translate-y-10">
             <HeroTools text="Emailing" image={gmail} />
@@ -81,13 +81,9 @@ const Hero = () => {
       </Container>
       {/*  */}
 
-      <div className="absolute -z-20 -top-10 inset-x-0 h-[90vh] overflow-clip">
-        <div className="absolute -top-1/3 right-3/4 size-[1800px] rounded-full bg-myaccent/30">
-          <div className="size-[95%] rounded-full bg-mybg"></div>
-        </div>
-        <div className="absolute -top-1/3 left-[75%] size-[1800px] rounded-full bg-myaccent/30">
-          <div className="size-[95%] rounded-full bg-mybg"></div>
-        </div>
+      <div className="absolute -z-20 inset-0 h-[90vh] overflow-clip">
+        <div className="absolute -top-1/3 -left-[95%] size-[1800px] rounded-full bg-mybg ring-[70px] ring-myaccent/10"></div>
+        <div className="absolute -top-1/3 -right-[90%] size-[1700px] rounded-full bg-mybg ring-[70px] ring-myaccent/10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-mybg via-mybg to-transparent"></div>
       </div>
     </main>
