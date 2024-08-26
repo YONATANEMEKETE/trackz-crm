@@ -23,7 +23,7 @@ const Solutions = () => {
 
       <div className="flex flex-col gap-y-4 lg:flex-row items-center justify-center lg:justify-between mb-20 w-full">
         <h2 className="text-[2.5rem] text-center lg:text-start max-w-[500px] lg:max-w-[40%] text-mytext font-content font-bold">
-          Build A Solution That's truly Your own
+          Build A Solution Thats truly Your own
         </h2>
         <p className="text-base text-mytextgray text-center lg:text-start  font-heading font-semibold max-w-[500px] lg:max-w-[45%]">
           Manage All things equity in one place, with Trackz you get the all in
@@ -41,7 +41,7 @@ const Solutions = () => {
         <div className="space-y-6 grid grid-cols-1 md:grid-cols-2 lg:block place-content-center mx-auto">
           <Solution
             heading="Business CRM"
-            description="Get organized and automate follow-up with keap’s client managment software"
+            description="Get organized and automate follow-up with keaps client managment software"
             icon={
               <FaLayerGroup size={24} className="group-hover:text-myaccent" />
             }

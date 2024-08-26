@@ -11,7 +11,7 @@ const Trusted = () => {
   return (
     <Container className="mx-4 min-[1200px]:mx-auto px-6 md:px-12 lg:px-28 py-10 md:py-20 space-y-16 bg-myaccent/90 rounded-2xl text-center">
       <div className="text-xl text-white font-content font-medium mx-auto">
-        Trusted by World's Best Companies
+        Trusted by Worlds Best Companies
       </div>
 
       <div className="flex flex-wrap items-center gap-4 gap-y-6 justify-center min-[530px]:justify-between">
