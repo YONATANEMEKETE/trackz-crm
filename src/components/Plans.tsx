@@ -45,6 +45,7 @@ const cardVariants = {
 const Plans = () => {
   return (
     <motion.div
+      id="pricing"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

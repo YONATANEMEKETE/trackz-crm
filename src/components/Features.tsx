@@ -51,6 +51,7 @@ const cardVariants = {
 const Features = () => {
   return (
     <motion.div
+      id="features"
       className="lg:mx-10 pt-20 pb-20 px-2 min-h-screen bg-mycardBg rounded-2xl text-center overflow-clip"
       variants={containerVariants}
       initial="hidden"

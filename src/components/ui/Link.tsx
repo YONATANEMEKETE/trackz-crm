@@ -1,29 +1,42 @@
+'use client';
+
 import { ChevronDown } from 'lucide-react';
 import React from 'react';
 import { Badge } from './badge';
 
 interface LinkProps {
   text: string;
+  href?: string;
   more?: boolean;
   hiring?: boolean;
 }
 
-const Links = ({ text, more, hiring }: LinkProps) => {
+const Links = ({ text, href, more, hiring }: LinkProps) => {
+  const handleClick = (e: React.MouseEvent) => {
+    if (href) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   if (more) {
     return (
-      <div className="flex items-center gap-2 cursor-pointer">
-        <div className="text-base text-mytext font-content font-semibold cursor-pointer">
+      <div className="flex items-center gap-2 cursor-pointer group" onClick={handleClick}>
+        <div className="text-base text-mytext font-content font-semibold cursor-pointer group-hover:text-myaccent transition-colors duration-200">
           {text}
         </div>
-        <ChevronDown />
+        <ChevronDown className="group-hover:text-myaccent transition-colors duration-200" />
       </div>
     );
   }
 
   if (hiring) {
     return (
-      <div className="flex items-start gap-2">
-        <div className="text-base text-mytext font-content font-semibold cursor-pointer">
+      <div className="flex items-start gap-2 group cursor-pointer" onClick={handleClick}>
+        <div className="text-base text-mytext font-content font-semibold cursor-pointer group-hover:text-myaccent transition-colors duration-200">
           {text}
         </div>
         <Badge
@@ -37,7 +50,7 @@ const Links = ({ text, more, hiring }: LinkProps) => {
   }
 
   return (
-    <div className="text-base text-mytext font-content font-semibold cursor-pointer">
+    <div className="text-base text-mytext font-content font-semibold cursor-pointer hover:text-myaccent transition-colors duration-200" onClick={handleClick}>
       {text}
     </div>
   );
