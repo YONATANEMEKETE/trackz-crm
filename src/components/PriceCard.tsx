@@ -35,7 +35,7 @@ const PriceCard = ({ variant, title, desciption, price }: PriceCardProps) => {
         <Button
           variant={'default'}
           size={'lg'}
-          className="w-full bg-white hover:bg-white  py-8 rounded-xl flex items-center justify-between"
+          className="w-full bg-white hover:bg-gray-100 py-8 rounded-xl flex items-center justify-between transition-colors duration-200"
         >
           <p className="text-myaccent text-lg font-content font-semibold">
             {price}
@@ -68,7 +68,7 @@ const PriceCard = ({ variant, title, desciption, price }: PriceCardProps) => {
         <Button
           variant={'default'}
           size={'lg'}
-          className="w-full bg-myaccent/90 hover:bg-myaccent  py-8 rounded-xl flex items-center justify-between"
+          className="w-full bg-myaccent/90 hover:bg-myaccent py-8 rounded-xl flex items-center justify-between transition-colors duration-200"
         >
           <p className="text-white text-lg font-content font-medium">{price}</p>
           <ArrowUpRight size={28} />
