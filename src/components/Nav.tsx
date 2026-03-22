@@ -25,12 +25,8 @@ const navVariants = {
 
 const Nav = () => {
   return (
-    <motion.div
-      variants={navVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <Container className="fixed z-40 top-6 min-[500px]:top-16 left-1/2 -translate-x-1/2 bg-white rounded-md shadow-[0px_5px_15px_rgba(0,0,0,0.35)] min-[1200px]:w-full w-[90%]">
+    <motion.div variants={navVariants} initial="hidden" animate="visible">
+      <Container className="fixed z-40 top-2 min-[500px]:top-9 left-1/2 -translate-x-1/2 bg-white rounded-md shadow-[0px_5px_15px_rgba(0,0,0,0.35)] min-[1200px]:w-full w-[90%]">
         <nav className="size-full  flex items-center justify-between  px-4 py-3">
           <div className="flex items-center gap-x-2 cursor-pointer">
             <Image src={logo1} alt="logo" width={50} height={50} className="" />
