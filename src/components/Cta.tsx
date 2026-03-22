@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Container from './Container';
 import { Button } from './ui/button';
 import { ArrowUpRight } from 'lucide-react';
@@ -52,21 +53,21 @@ const Cta = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <Container className="mx-2 min-[1200px]:mx-auto relative z-10 mt-40 bg-myctaBg rounded-3xl overflow-clip py-24 text-center">
+      <Container className="mx-2 min-[1200px]:mx-auto relative z-10 mt-24 bg-myctaBg rounded-3xl overflow-clip py-16 text-center">
         <motion.h2
-          className="text-[2rem] md:text-[3rem] text-white font-content font-semibold"
+          className="text-[1.75rem] md:text-[2.5rem] text-white font-content font-semibold"
           variants={itemVariants}
         >
           Lets get you growing.
         </motion.h2>
         <motion.h2
-          className="text-[2rem] md:text-[3rem] text-white font-content font-semibold"
+          className="text-[1.75rem] md:text-[2.5rem] text-white font-content font-semibold"
           variants={itemVariants}
         >
           Without the pains.
         </motion.h2>
         <motion.p
-          className="text-mybg/70 text-sm md:text-base font-heading font-semibold max-w-[500px] mx-auto mt-4"
+          className="text-mybg/70 text-sm font-heading font-semibold max-w-[500px] mx-auto mt-3"
           variants={itemVariants}
         >
           CRM that works for you, not the other way arround its lightweight,
@@ -75,23 +76,27 @@ const Cta = () => {
         {/*  */}
         <div className="flex flex-col min-[500px]:flex-row items-center gap-6 mx-auto w-max mt-12">
           <motion.div variants={buttonVariants}>
-            <Button
-              variant={'default'}
-              size={'lg'}
-              className="text-lg font-heading font-semibold text-white bg-myaccent/80 hover:bg-myaccent rounded-xl py-6 transition-colors duration-200"
-            >
-              Start Free Now
-            </Button>
+            <Link href="/login">
+              <Button
+                variant={'default'}
+                size={'lg'}
+                className="text-lg font-heading font-semibold text-white bg-myaccent/80 hover:bg-myaccent rounded-xl py-6 transition-colors duration-200"
+              >
+                Start Free Now
+              </Button>
+            </Link>
           </motion.div>
           <motion.div variants={buttonVariants}>
-            <Button
-              variant={'default'}
-              size={'lg'}
-              className="text-lg font-heading font-semibold text-mytext bg-mybg hover:bg-gray-200 rounded-xl py-6 transition-colors duration-200"
-            >
-              Contact Sales
-              <ArrowUpRight />
-            </Button>
+            <Link href="/login">
+              <Button
+                variant={'default'}
+                size={'lg'}
+                className="text-lg font-heading font-semibold text-mytext bg-mybg hover:bg-gray-200 rounded-xl py-6 transition-colors duration-200"
+              >
+                Contact Sales
+                <ArrowUpRight />
+              </Button>
+            </Link>
           </motion.div>
         </div>
 

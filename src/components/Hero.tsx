@@ -2,11 +2,17 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from './ui/button';
 import { CirclePlay } from 'lucide-react';
 import { MdOutlinePlayCircleFilled } from 'react-icons/md';
 import Container from './Container';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from './ui/dialog';
 
 import HeroChart from './HeroChart';
 import HeroChart2 from './HeroChart2';
@@ -80,21 +86,21 @@ const Hero = () => {
 
   return (
     <motion.main
-      className="relative z-10 min-h-screen pt-40 min-[500px]:pt-52 pb-32 px-4 space-y-12"
+      className="relative z-10 min-h-[90vh] pt-32 min-[500px]:pt-40 pb-20 px-4 space-y-8"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <div className="max-w-[800px] mx-auto text-center">
         <motion.div
-          className="text-[3rem] md:text-[4rem] leading-tight tracking-wide text-mytext font-content font-bold mb-8"
+          className="text-[2.5rem] md:text-[3.5rem] leading-tight tracking-wide text-mytext font-content font-bold mb-6"
           variants={itemVariants}
         >
           One smart solution tool for your business
         </motion.div>
 
         <motion.p
-          className="max-w-[600px] mx-auto text-lg md:text-xl leading-normal text-mytextgray font-heading font-medium mb-12"
+          className="max-w-[600px] mx-auto text-base md:text-lg leading-normal text-mytextgray font-heading font-medium mb-8"
           variants={itemVariants}
         >
           CRM that works for you. not the other way arround, it is Lightweight,
@@ -103,13 +109,15 @@ const Hero = () => {
 
         <div className="grid grid-cols-1 min-[500px]:grid-cols-2 flex-wrap items-center gap-4 mx-auto w-max">
           <motion.div variants={buttonVariants}>
-            <Button
-              variant={'default'}
-              size={'lg'}
-              className="text-lg font-heading font-semibold text-white bg-myaccent hover:bg-myaccent/90 rounded-2xl py-8 transition-colors duration-200"
-            >
-              Start Free Now
-            </Button>
+            <Link href="/login">
+              <Button
+                variant={'default'}
+                size={'lg'}
+                className="text-lg font-heading font-semibold text-white bg-myaccent hover:bg-myaccent/90 rounded-2xl py-8 transition-colors duration-200"
+              >
+                Start Free Now
+              </Button>
+            </Link>
           </motion.div>
           <motion.div variants={buttonVariants}>
             <Button
@@ -134,7 +142,7 @@ const Hero = () => {
           </DialogHeader>
           <div className="relative aspect-video">
             <iframe
-              src={`https://www.youtube.com/watch?v=GCMdLB82FXg?autoplay=1&mute=1`}
+              src={`https://www.youtube.com/watch?v=GCMdLB82FXg`}
               title="Demo Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -145,7 +153,7 @@ const Hero = () => {
       </Dialog>
 
       <motion.div variants={chartVariants}>
-        <Container className="flex items-center justify-center lg:justify-between pt-10 max-w-[1100px] mx-auto">
+        <Container className="flex items-center justify-center lg:justify-between pt-6 max-w-[1100px] mx-auto">
           <motion.div variants={itemVariants}>
             <HeroToolsJoined />
           </motion.div>

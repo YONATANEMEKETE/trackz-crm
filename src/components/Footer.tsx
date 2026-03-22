@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Container from './Container';
 import Image from 'next/image';
 import logo1 from '../../public/logo1.png';
@@ -135,14 +136,16 @@ const Footer = () => {
                 placeholder="Your email adress"
                 className="border border-myaccent rounded-xl min-w-[250px] md:min-w-[350px] py-5 bg-mybg text-base text-mytext font-heading font-semibold"
               />
-              <Button
-                variant={'default'}
-                size={'lg'}
-                className="min-w-[250px] md:min-w-[350px] flex items-center bg-myaccent/90 hover:bg-myaccent rounded-xl text-white text-base font-content font-semibold transition-colors duration-200"
-              >
-                <p>Sign Up</p>
-                <ArrowUpRight />
-              </Button>
+              <Link href="/login">
+                <Button
+                  variant={'default'}
+                  size={'lg'}
+                  className="min-w-[250px] md:min-w-[350px] flex items-center bg-myaccent/90 hover:bg-myaccent rounded-xl text-white text-base font-content font-semibold transition-colors duration-200"
+                >
+                  <p>Sign Up</p>
+                  <ArrowUpRight />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -67,20 +67,20 @@ const Solutions = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <Container className="py-16 pt-28 px-8 mb-12">
+      <Container className="py-12 pt-20 px-8 mb-8">
         <motion.div className="w-max mx-auto lg:ml-0" variants={itemVariants}>
           <Button
             variant={'outline'}
             size={'lg'}
-            className="text-center rounded-xl bg-transparent hover:bg-transparent hover:text-myaccent text-lg text-myaccent border-myaccent/80 font-heading font-semibold mb-8"
+            className="text-center rounded-xl bg-transparent hover:bg-transparent hover:text-myaccent text-lg text-myaccent border-myaccent/80 font-heading font-semibold mb-6"
           >
             Solutions
           </Button>
         </motion.div>
 
-        <div className="flex flex-col gap-y-4 lg:flex-row items-center justify-center lg:justify-between mb-20 w-full">
+        <div className="flex flex-col gap-y-4 lg:flex-row items-center justify-center lg:justify-between mb-12 w-full">
           <motion.h2
-            className="text-[2.5rem] text-center lg:text-start max-w-[500px] lg:max-w-[40%] text-mytext font-content font-bold"
+            className="text-[2rem] text-center lg:text-start max-w-[500px] lg:max-w-[40%] text-mytext font-content font-bold"
             variants={itemVariants}
           >
             Build A Solution Thats truly Your own

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 import logo1 from '../../public/logo1.png';
 import logo2 from '../../public/logo2.png';
 import { Button } from './ui/button';
@@ -32,16 +33,18 @@ const PriceCard = ({ variant, title, desciption, price }: PriceCardProps) => {
           {desciption}
         </p>
 
-        <Button
-          variant={'default'}
-          size={'lg'}
-          className="w-full bg-white hover:bg-gray-100 py-8 rounded-xl flex items-center justify-between transition-colors duration-200"
-        >
-          <p className="text-myaccent text-lg font-content font-semibold">
-            {price}
-          </p>
-          <ArrowUpRight size={28} className="text-myaccent" />
-        </Button>
+        <Link href="/login">
+          <Button
+            variant={'default'}
+            size={'lg'}
+            className="w-full bg-white hover:bg-gray-100 py-8 rounded-xl flex items-center justify-between transition-colors duration-200"
+          >
+            <p className="text-myaccent text-lg font-content font-semibold">
+              {price}
+            </p>
+            <ArrowUpRight size={28} className="text-myaccent" />
+          </Button>
+        </Link>
       </div>
     );
   }
@@ -65,14 +68,16 @@ const PriceCard = ({ variant, title, desciption, price }: PriceCardProps) => {
           {desciption}
         </p>
 
-        <Button
-          variant={'default'}
-          size={'lg'}
-          className="w-full bg-myaccent/90 hover:bg-myaccent py-8 rounded-xl flex items-center justify-between transition-colors duration-200"
-        >
-          <p className="text-white text-lg font-content font-medium">{price}</p>
-          <ArrowUpRight size={28} />
-        </Button>
+        <Link href="/login">
+          <Button
+            variant={'default'}
+            size={'lg'}
+            className="w-full bg-myaccent/90 hover:bg-myaccent py-8 rounded-xl flex items-center justify-between transition-colors duration-200"
+          >
+            <p className="text-white text-lg font-content font-medium">{price}</p>
+            <ArrowUpRight size={28} />
+          </Button>
+        </Link>
       </div>
     );
   }

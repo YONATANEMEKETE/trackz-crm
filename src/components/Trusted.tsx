@@ -56,9 +56,9 @@ const Trusted = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <Container className="mx-4 min-[1200px]:mx-auto px-6 md:px-12 lg:px-28 py-10 md:py-20 space-y-16 bg-myaccent/90 rounded-2xl text-center">
+      <Container className="mx-4 min-[1200px]:mx-auto px-6 md:px-12 lg:px-28 py-6 md:py-10 space-y-8 bg-myaccent/90 rounded-2xl text-center">
         <motion.div
-          className="text-xl text-white font-content font-medium mx-auto"
+          className="text-lg text-white font-content font-medium mx-auto"
           variants={itemVariants}
         >
           Trusted by Worlds Best Companies

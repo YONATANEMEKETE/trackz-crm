@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Container from './Container';
 import { Button } from './ui/button';
 import Feature from './Feature';
@@ -52,7 +53,7 @@ const Features = () => {
   return (
     <motion.div
       id="features"
-      className="lg:mx-10 pt-20 pb-20 px-2 min-h-screen bg-mycardBg rounded-2xl text-center overflow-clip"
+      className="lg:mx-10 pt-16 pb-16 px-2 bg-mycardBg rounded-2xl text-center overflow-clip"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -62,28 +63,28 @@ const Features = () => {
         <Button
           variant={'outline'}
           size={'lg'}
-          className="rounded-xl bg-transparent hover:bg-transparent hover:text-myaccent text-lg text-myaccent border-myaccent/80 font-heading font-semibold mb-8"
+          className="rounded-xl bg-transparent hover:bg-transparent hover:text-myaccent text-lg text-myaccent border-myaccent/80 font-heading font-semibold mb-6"
         >
           Features
         </Button>
       </motion.div>
 
       <motion.h2
-        className="text-[2rem] md:text-[3rem] text-mytext font-heading font-semibold max-w-[700px] mx-auto mb-4"
+        className="text-[1.75rem] md:text-[2.5rem] text-mytext font-heading font-semibold max-w-[700px] mx-auto mb-3"
         variants={itemVariants}
       >
         Your Customers are always Connected.
       </motion.h2>
 
       <motion.p
-        className="text-mytextgray text-base md:text-lg font-content font-semibold max-w-[500px] mx-auto"
+        className="text-mytextgray text-sm md:text-base font-content font-semibold max-w-[500px] mx-auto mb-8"
         variants={itemVariants}
       >
         Customer relationship Managment tool for everyone who values
         collaboration
       </motion.p>
       {/*  */}
-      <Container className="border pt-10 flex items-center gap-8 flex-wrap justify-center mb-24">
+      <Container className="border pt-8 flex items-center gap-6 flex-wrap justify-center mb-12">
         <motion.div variants={cardVariants}>
           <Feature
             icon={<FaChartPie size={28} className="text-myaccent" />}
@@ -122,14 +123,16 @@ const Features = () => {
       </Container>
 
       <motion.div variants={itemVariants}>
-        <Button
-          variant={'default'}
-          size={'lg'}
-          className="flex items-center bg-myaccent/80 py-8 hover:bg-myaccent rounded-xl text-white text-base font-content font-semibold mx-auto transition-colors duration-200"
-        >
-          <p>Learn More</p>
-          <ArrowUpRight />
-        </Button>
+        <Link href="/login">
+          <Button
+            variant={'default'}
+            size={'lg'}
+            className="flex items-center bg-myaccent/80 py-8 hover:bg-myaccent rounded-xl text-white text-base font-content font-semibold mx-auto transition-colors duration-200"
+          >
+            <p>Learn More</p>
+            <ArrowUpRight />
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );

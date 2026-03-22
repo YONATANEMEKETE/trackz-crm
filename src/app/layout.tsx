@@ -19,8 +19,50 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: 'Trackz',
-  description: 'CRM Solution for your business',
+  title: {
+    default: 'Trackz - Smart CRM Solution',
+    template: '%s | Trackz',
+  },
+  description: 'CRM that works for you, not the other way around. Lightweight, customizable and powered by AI. The smart solution tool for your business.',
+  keywords: ['CRM', 'customer relationship management', 'sales automation', 'email marketing', 'business tools', 'AI-powered'],
+  authors: [{ name: 'Trackz' }],
+  creator: 'Trackz',
+  publisher: 'Trackz',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://trackz-crm.vercel.app'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: '/',
+    siteName: 'Trackz',
+    title: 'Trackz - Smart CRM Solution',
+    description: 'CRM that works for you, not the other way around. Lightweight, customizable and powered by AI.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Trackz - Smart CRM Solution',
+    description: 'CRM that works for you, not the other way around. Lightweight, customizable and powered by AI.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

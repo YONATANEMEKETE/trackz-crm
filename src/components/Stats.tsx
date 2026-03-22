@@ -35,7 +35,7 @@ function Stats() {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <Container className="pt-24 flex flex-wrap gap-4 items-center justify-center md:justify-between px-10 lg:px-32">
+      <Container className="pt-16 pb-8 flex flex-wrap gap-4 items-center justify-center md:justify-between px-10 lg:px-32">
         <motion.div variants={itemVariants}>
           <Stat stat="12+" description="Years of Experience" />
         </motion.div>
