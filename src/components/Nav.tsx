@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Container from './Container';
 import Image from 'next/image';
 import logo1 from '../../public/logo1.png';
@@ -44,21 +45,25 @@ const Nav = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button
-              variant={'outline'}
-              size={'lg'}
-              className="hidden md:block bg-transparent hover:bg-myaccent hover:text-white rounded-xl  border-myaccent text-mytext text-base font-content font-semibold"
-            >
-              Login
-            </Button>
-            <Button
-              variant={'default'}
-              size={'lg'}
-              className="px-3 min-[500px]:px-6 flex items-center bg-myaccent hover:bg-myaccent/90 rounded-xl text-white text-base font-content font-semibold"
-            >
-              <p>Sign Up</p>
-              <ArrowUpRight />
-            </Button>
+            <Link href="/login">
+              <Button
+                variant={'outline'}
+                size={'lg'}
+                className="hidden md:block bg-transparent hover:bg-myaccent hover:text-white rounded-xl  border-myaccent text-mytext text-base font-content font-semibold transition-colors duration-200"
+              >
+                Login
+              </Button>
+            </Link>
+            <Link href="/signup">
+              <Button
+                variant={'default'}
+                size={'lg'}
+                className="px-3 min-[500px]:px-6 flex items-center bg-myaccent hover:bg-myaccent/90 rounded-xl text-white text-base font-content font-semibold transition-colors duration-200"
+              >
+                <p>Sign Up</p>
+                <ArrowUpRight />
+              </Button>
+            </Link>
           </div>
         </nav>
       </Container>
