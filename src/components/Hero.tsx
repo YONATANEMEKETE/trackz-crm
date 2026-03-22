@@ -1,11 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import { CirclePlay } from 'lucide-react';
 import { MdOutlinePlayCircleFilled } from 'react-icons/md';
 import Container from './Container';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 
 import HeroChart from './HeroChart';
 import HeroChart2 from './HeroChart2';
@@ -72,6 +73,11 @@ const chartVariants = {
 };
 
 const Hero = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  // Replace this with your YouTube video URL
+  const youtubeVideoId = 'dQw4w9WgXcQ'; // Example video ID
+
   return (
     <motion.main
       className="relative z-10 min-h-screen pt-40 min-[500px]:pt-52 pb-32 px-4 space-y-12"
@@ -110,6 +116,7 @@ const Hero = () => {
               variant={'outline'}
               size={'lg'}
               className="bg-transparent hover:bg-myaccent hover:text-white border-myaccent/50 rounded-2xl py-8 text-lg font-heading font-semibold flex items-center gap-2 transition-colors duration-200"
+              onClick={() => setIsDialogOpen(true)}
             >
               <MdOutlinePlayCircleFilled size={28} />
               <p>Watch Demo</p>
@@ -117,6 +124,25 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[900px] p-0 overflow-hidden bg-black">
+          <DialogHeader className="p-4 pb-0">
+            <DialogTitle className="text-white font-content">
+              Demo Video
+            </DialogTitle>
+          </DialogHeader>
+          <div className="relative aspect-video">
+            <iframe
+              src={`https://www.youtube.com/watch?v=GCMdLB82FXg?autoplay=1&mute=1`}
+              title="Demo Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <motion.div variants={chartVariants}>
         <Container className="flex items-center justify-center lg:justify-between pt-10 max-w-[1100px] mx-auto">
